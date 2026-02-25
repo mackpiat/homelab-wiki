@@ -22,6 +22,8 @@ jobs:
     steps:
       # checks out the repo's code onto the temp cloud server.
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       # sets up the py env required to run mkdocs.
       - name: Configure Python

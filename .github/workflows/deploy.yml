@@ -1,0 +1,41 @@
+# .github/workflows/deploy.yml
+
+name: Deploy homelab-wiki
+
+# the 'on' block defines the trigger telling github actions to spin up
+# a server and run this pipeline ONLY when a push is made to the 'main' branch.
+on:
+  push:
+    branches:
+      - main
+
+# defines the permission the pipeline needs. write access is need to the repository
+# to push the compiled html files to the 'gh-pages' branch.
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    # specifies the os for the temp github runner,
+    # ubuntu is standard, fast, and reliable for py based builds.
+    runs-on: ubuntu-latest
+    steps:
+      # checks out the repo's code onto the temp cloud server.
+      - uses: actions/checkout@v4
+
+      # sets up the py env required to run mkdocs.
+      - name: Configure Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      # upgrades pip and installs the dependencies as defined in the requirements.txt
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # 'gh-deploy' tells mkdocs to build the site,
+      # create a hidden 'gh-pages' branch, and push the compiled html there automatically.
+      - name: Deploy to GitHub Pages
+        run: mkdocs gh-deploy --force

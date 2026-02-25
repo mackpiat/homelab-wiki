@@ -1,0 +1,25 @@
+# mkdocs.yml
+
+# overarching title of the documentation site
+# appears in the browser tab, search engine results, and the top-left header.
+site_name: T470 Edge Infrastructure
+
+# specifying the 'material' theme, since it is the industry standard
+# for open-source project documentation as it builds a responsive, mobile-friendly ui automatically.
+theme:
+  name: material
+
+  # palette configuration controls the css
+  # 'scheme: slate' forces a permanent dark mode
+  # 'primary: black' sets the top navbar color to solid black
+  # 'accent: deep orange' gives hyperlinks and active menu items a sharp contrast color.
+  palette:
+    scheme: slate
+    primary: black
+    accent: deep orange
+
+  # defines the navigation menu on the left sidebar.
+  # right now, just pointing to homepage (index.md) which some lines are added
+  # like '- CrowdSec IDS: crowdsec.md' to create new pages in the sidebar.
+  nav:
+    - Home: index.md

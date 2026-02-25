@@ -35,6 +35,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # server needs a fake identify to sign the git commit before it pushes the new branch
+      - name: Configure Git Credentials
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
       # 'gh-deploy' tells mkdocs to build the site,
       # create a hidden 'gh-pages' branch, and push the compiled html there automatically.
       - name: Deploy to GitHub Pages

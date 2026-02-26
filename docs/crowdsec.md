@@ -8,7 +8,7 @@ This document outlines the deployment and configuration of CrowdSec on the Debia
 * **Mitigation Bouncer** - `crowdsec-firewall-bouncer-nftables` (Responsible for manipulating firewall rules)
 * **Telemetry** - `cscli` (Command Line Interface for engine management)
 
-## 1. Installation
+## Installation
 
 The deployment requires two distinct components - the monitoring agent and the enforcement bouncer.
 
@@ -26,7 +26,7 @@ sudo apt install crowdsec -y
 ```bash
 sudo apt install crowdsec-firewall-bouncer-nftables -y
 ```
-## 2. Threat Intelligence Sync
+## Threat Intelligence Sync
 - To ensure the router defends against zero-day threats and currently active botnets, the local hub must be synchronized with the global database.
 - 'hub update' pulls the latest index of available parsers and global blocklists.
 - 'hub upgrade' applies them to the local engine, immediately shielding the router from tens of thousands of globally recognized malicious IPs.
@@ -34,7 +34,7 @@ sudo apt install crowdsec-firewall-bouncer-nftables -y
 sudo cscli hub update && sudo cscli hub upgrade
 ```
 
-## 3. Log Acquisition & Parsing (The systemd Fix)
+## Log Acquisition & Parsing (The systemd Fix)
 By default, modern Debian systems utilize journald for logging, rather than flat files in /var/log/. The engine required specific parsers to translate the systemd journal format into actionable threat intelligence.
 
 - Install the baseline Linux collection, providing the dictionaries necessary to understand syslog and iptables/nftables drop logs.
@@ -53,7 +53,7 @@ Baseline Linux and sshd collection comes along with the package (Optional to run
 sudo systemctl restart crowdsec
 ```
 
-## 4. Operational Verification
+## Operational Verification
 - View all IPs currently banned by the local firewall
 ```bash
 sudo cscli decisions list

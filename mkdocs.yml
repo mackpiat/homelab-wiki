@@ -23,3 +23,5 @@ theme:
   # like '- CrowdSec IDS: crowdsec.md' to create new pages in the sidebar.
   nav:
     - Home: index.md
+    - Infrastructure:
+      - CrowdSec IDS: crowdsec.md

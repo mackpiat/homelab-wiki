@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../crowdsec/">
       
-      
-        <link rel="next" href="../unbound/">
       
       
         
@@ -23,7 +21,7 @@
     
     
       
-        <title>CrowdSec IDS/IPS Deployment - T470 Edge Infrastructure</title>
+        <title>Unbound Recursive DNS Resolver - T470 Edge Infrastructure</title>
       
     
     
@@ -72,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#crowdsec-idsips-deployment" class="md-skip">
+        <a href="#unbound-recursive-dns-resolver" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CrowdSec IDS/IPS Deployment
+              Unbound Recursive DNS Resolver
             
           </span>
         </div>
@@ -228,6 +226,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../crowdsec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CrowdSec IDS/IPS Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -247,7 +272,7 @@
   <span class="md-ellipsis">
     
   
-    CrowdSec IDS/IPS Deployment
+    Unbound Recursive DNS Resolver
   
 
     
@@ -265,7 +290,7 @@
   <span class="md-ellipsis">
     
   
-    CrowdSec IDS/IPS Deployment
+    Unbound Recursive DNS Resolver
   
 
     
@@ -302,10 +327,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
+  <a href="#architecture-traffic-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Architecture
+        Architecture &amp; Traffic Flow
       
     </span>
   </a>
@@ -313,10 +338,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#installation-root-hints" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation
+        Installation &amp; Root Hints
       
     </span>
   </a>
@@ -324,10 +349,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#threat-intelligence-sync" class="md-nav__link">
+  <a href="#core-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Threat Intelligence Sync
+        Core Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-paylod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Paylod
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-initialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Initialization
       
     </span>
   </a>
@@ -335,21 +388,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#log-acquisition-parsing-the-systemd-fix" class="md-nav__link">
+  <a href="#adguard-integration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Log Acquisition &amp; Parsing (The systemd Fix)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operational-verification" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Operational Verification
+        AdGuard Integration
       
     </span>
   </a>
@@ -360,33 +402,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../unbound/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Unbound Recursive DNS Resolver
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -429,10 +444,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
+  <a href="#architecture-traffic-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Architecture
+        Architecture &amp; Traffic Flow
       
     </span>
   </a>
@@ -440,10 +455,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#installation-root-hints" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation
+        Installation &amp; Root Hints
       
     </span>
   </a>
@@ -451,10 +466,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#threat-intelligence-sync" class="md-nav__link">
+  <a href="#core-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Threat Intelligence Sync
+        Core Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-paylod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Paylod
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-initialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Initialization
       
     </span>
   </a>
@@ -462,21 +505,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#log-acquisition-parsing-the-systemd-fix" class="md-nav__link">
+  <a href="#adguard-integration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Log Acquisition &amp; Parsing (The systemd Fix)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operational-verification" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Operational Verification
+        AdGuard Integration
       
     </span>
   </a>
@@ -500,74 +532,101 @@
 
 
 
-<h1 id="crowdsec-idsips-deployment">CrowdSec IDS/IPS Deployment</h1>
+<h1 id="unbound-recursive-dns-resolver">Unbound Recursive DNS Resolver</h1>
 <h2 id="overview">Overview</h2>
-<p>This document outlines the deployment and configuration of CrowdSec on the Debian router. CrowdSec acts as a collaborative Intrusion Detection System (IDS) and Intrusion Prevention System (IPS). It parses local system logs in real-time, cross-references suspicious behavior against a global threat intelligence network, and actively drops malicious packets at the network edge.</p>
-<h2 id="architecture">Architecture</h2>
+<p>This document outlines the configuration of <strong>Unbound</strong>, deployed as a fully recursive, authoritative DNS resolver on the Debian router.</p>
+<p>By default, most networks forward DNS queries to upstream corporate providers (like Cloudflare's <code>1.1.1.1</code> or Google's <code>8.8.8.8</code>). This setup eliminates that dependency. When a client requests a domain, Unbound queries the 13 internet Root Servers directly, traverses to the Top Level Domain (TLD) servers, and finally to the authoritative nameservers.</p>
+<p><strong>Result:</strong> Maximum privacy. No single third-party entity possesses a complete log of the network's DNS queries.</p>
+<h2 id="architecture-traffic-flow">Architecture &amp; Traffic Flow</h2>
+<ol>
+<li>Client device requests a domain.</li>
+<li>The query is routed through the Tailscale tunnel to the <strong>AdGuard Home</strong> instance.</li>
+<li>AdGuard filters the request against known ad/tracker blocklists.</li>
+<li>If permitted, AdGuard forwards the request locally to <strong>Unbound</strong> (<code>127.0.0.1:5335</code>).</li>
+<li>Unbound performs the recursive resolution and caches the result for future identical queries.</li>
+</ol>
+<h2 id="installation-root-hints">Installation &amp; Root Hints</h2>
+<p>First, we install the service and download the <code>root.hints</code> file. This file acts as the ultimate map, telling Unbound the IP addresses of the 13 master DNS servers that govern the internet.</p>
 <ul>
-<li><strong>Core Engine</strong> - <code>crowdsec</code> (Responsible for log acquisition and parsing)</li>
-<li><strong>Mitigation Bouncer</strong> - <code>crowdsec-firewall-bouncer-nftables</code> (Responsible for manipulating firewall rules)</li>
-<li><strong>Telemetry</strong> - <code>cscli</code> (Command Line Interface for engine management)</li>
+<li>Unbound is available directly in the main Debian repositories.</li>
 </ul>
-<h2 id="installation">Installation</h2>
-<p>The deployment requires two distinct components - the monitoring agent and the enforcement bouncer.</p>
-<ul>
-<li>Add the official CrowdSec repository to receive timely security patches directly from the maintainers, bypassing older Debian repos.</li>
-</ul>
-<pre><code class="language-bash">curl -s [https://install.crowdsec.net](https://install.crowdsec.net) | sudo bash
+<pre><code class="language-bash">sudo apt install unbound -y
 </code></pre>
 <ul>
-<li>Install the core engine. By default, it runs as a daemon but does not actively block traffic yet.</li>
+<li>We must manually download the latest list of root servers from InterNIC. The '-O' flag directs wget to overwrite the existing, potentially outdated <code>root.hints</code> file that comes with the default installation.</li>
 </ul>
-<pre><code class="language-bash">sudo apt install crowdsec -y
+<pre><code class="language-bash">wget [https://www.internic.net/domain/named.cache](https://www.internic.net/domain/named.cache) -qO /var/lib/unbound/root.hints
+</code></pre>
+<h2 id="core-configuration">Core Configuration</h2>
+<p>The primary configuration is written to a dedicated file to avoid modifying the base Unbound template. This ensures updates to the package do not overwrite our custom routing logic.</p>
+<ul>
+<li>Create and edit the custom configuration file</li>
+</ul>
+<pre><code class="language-bash">sudo vim /etc/unbound/unbound.conf.d/homelab.conf
+</code></pre>
+<h3 id="configuration-paylod">Configuration Paylod</h3>
+<pre><code>server:
+    # Increase the verbosity (L1) for troubleshooting.
+    verbosity: 1
+
+    # Point Unbound to the map of the internet thats downloaded
+    root-hints: &quot;/var/lib/unbount/root.hints&quot;
+
+    # AdGuard Home must operate on standard port 53 to intercept client network requests.
+    # Therefore, Unbound is shifted to port 5335 to prevent a bind-address conflict.
+    port: 5335
+
+    # Unbound should only accept queries forwarded by the local AdGuard instance.
+    # Listening strictly on the loopback interface prevents the service from being
+    # weaponized in a DNS amplification attack from the open internet.
+    interface: 127.0.0.1
+
+    # Limits the service to IPv4 only. Disabling IPv6 prevents unnecessary
+    # external queries and potential DNS leaks, as the internal homelab does not utilize IPv6.
+    do-ip4: yes
+    do-udp: yes
+    do-tcp: yes
+    do-ip6: no
+
+    # Enables DNSSEC validation. This ensures the DNS records received from
+    # the root servers have not been cryptographically tampered with or hijacked in transit.
+    harden-dnssec-stripped: yes
+
+    # QNAME Minimisation is strictly for privacy. If a client asks for 'app.example.com',
+    # Unbound only asks the root server where '.com' is, not the full string.
+    # It minimizes metadata leaked to higher-level hierarchy servers.
+    qname-minimisation: yes
+
+    # Prevents DNS rebinding attacks. It ensures that malicious upstream servers
+    # cannot return private, local IP addresses in their responses to hijack local routing.
+    private-address: 192.168.0.0/16
+    private-address: 169.254.0.0/16
+    private-address: 172.16.0.0/12
+    private-address: 10.0.0.0/8
+    private-address: fd00::/8
+    private-address: fe80::/10
+
+    # Caching optimization to serve expired cache entries immediately to the user while
+    # unbound fetches the updated record in the background making the browsing feel instantly responsive.
+    serve-expired: yes
+
+    # Pre-fetching popular records before they expire from the cache.
+    prefetch: yes
+</code></pre>
+<h2 id="service-initialization">Service Initialization</h2>
+<p>With the configuration written, the service is enabled to start on boot and restarted to apply the new parameters.</p>
+<ul>
+<li>'enable --now' is a systemd shortcut that both enables the service to run at boot and starts it immediately in the current session.</li>
+</ul>
+<pre><code class="language-bash">sudo systemctl enable --now unbound
 </code></pre>
 <ul>
-<li>Install the specific bouncer for our firewall backend. This binary reads the local API decisions from the CrowdSec engine and automatically creates 'drop' rules in the nftables chains.</li>
+<li>Verify the service is running smoothly and actively listening on port 5335.</li>
 </ul>
-<pre><code class="language-bash">sudo apt install crowdsec-firewall-bouncer-nftables -y
+<pre><code class="language-bash">sudo systemctl status unbound
 </code></pre>
-<h2 id="threat-intelligence-sync">Threat Intelligence Sync</h2>
-<ul>
-<li>To ensure the router defends against zero-day threats and currently active botnets, the local hub must be synchronized with the global database.</li>
-<li>'hub update' pulls the latest index of available parsers and global blocklists.</li>
-<li>'hub upgrade' applies them to the local engine, immediately shielding the router from tens of thousands of globally recognized malicious IPs.</li>
-</ul>
-<pre><code class="language-bash">sudo cscli hub update &amp;&amp; sudo cscli hub upgrade
-</code></pre>
-<h2 id="log-acquisition-parsing-the-systemd-fix">Log Acquisition &amp; Parsing (The systemd Fix)</h2>
-<p>By default, modern Debian systems utilize journald for logging, rather than flat files in /var/log/. The engine required specific parsers to translate the systemd journal format into actionable threat intelligence.</p>
-<ul>
-<li>Install the baseline Linux collection, providing the dictionaries necessary to understand syslog and iptables/nftables drop logs.</li>
-</ul>
-<pre><code class="language-bash">sudo cscli collections install crowdsecurity/linux
-</code></pre>
-<ul>
-<li>Install the specific dictionaries required to parse OpenSSH daemon logs, allowing the engine to detect SSH brute-force and exploit attempts.</li>
-</ul>
-<pre><code class="language-bash">sudo cscli collections install crowdsecurity/sshd
-</code></pre>
-<p>Baseline Linux and sshd collection comes along with the package (Optional to run the above commands, incase the collections are not installed).</p>
-<ul>
-<li>The CrowdSec daemon loads parsers into memory at boot. Restarting the service forces it to apply the newly installed collections to the live journal stream.</li>
-</ul>
-<pre><code class="language-bash">sudo systemctl restart crowdsec
-</code></pre>
-<h2 id="operational-verification">Operational Verification</h2>
-<ul>
-<li>View all IPs currently banned by the local firewall</li>
-</ul>
-<pre><code class="language-bash">sudo cscli decisions list
-</code></pre>
-<ul>
-<li>View the status of log parsing and acquisition (Verify 'Lines parsed' increments under Acquisition Metrics)</li>
-</ul>
-<pre><code class="language-bash">sudo cscli metrics
-</code></pre>
-<ul>
-<li>Tail the live CrowdSec engine logs via the systemd journal</li>
-</ul>
-<pre><code class="language-bash">sudo journalctl -u crowdsec -f
-</code></pre>
+<h2 id="adguard-integration">AdGuard Integration</h2>
+<p>The final step bridges the two services. In the AdGuard Home web dashboard <code>(Settings -&gt; DNS Settings)</code>, the Upstream DNS servers field is cleared of all external providers (e.g., Cloudflare, Google) and replaced exclusively with, <code>127.0.0.1:5335</code>.</p>
 
 
 

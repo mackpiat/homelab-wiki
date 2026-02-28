@@ -25,3 +25,4 @@ theme:
     - Home: index.md
     - Infrastructure:
       - CrowdSec IDS: crowdsec.md
+      - Unbound DNS: unbound.md
